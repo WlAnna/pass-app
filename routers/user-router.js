@@ -14,6 +14,7 @@ const {strategy, checkAuthenticated, checkNotAuthenticated } = require('../src/p
 passport.use(strategy);
 router.use(express.urlencoded({ extended: false }))
 router.use(flash())
+//seassion used to store data on the server
 router.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
@@ -29,8 +30,8 @@ router.get('/', checkAuthenticated, (req, res) => {
 
 router.get('/login', checkNotAuthenticated, (req,res) => {
     res.render('login', { 
-        title: 'login.css',
-        style: '' }) 
+        title: 'Login',
+        style: 'login.css' }) 
 })
 
 router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
@@ -40,7 +41,9 @@ router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
 })) 
 
 router.get('/register', checkNotAuthenticated, (req,res) => {
-    res.render('register', { title: 'Register' }) 
+    res.render('register', { 
+        title: 'Register',
+        style: 'register.css' }) 
 })
 
 router.post('/register', checkNotAuthenticated, async (req, res) => {

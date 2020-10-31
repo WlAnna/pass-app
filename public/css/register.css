@@ -36,16 +36,19 @@ input {
     margin: 5px 0px 15px 0px;
 }
 
-.form {
-    margin-top: 25px;
-}
-
 .error-wrapper {
-    margin: 10px 0px 0px 50px;
-    width: 330px;
+    margin: 70px 0px 0px 50px;
 }
 
 .error-message {
     background-color:#F1F1F1;
-    padding: 10px 0px 10px 10px;
 }
+
+/*register page*/
+
+.form {
+    margin-top: 0px;
+
+}
+
+

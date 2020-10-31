@@ -35,10 +35,12 @@ footer {
 }
 
 header {
-    margin-top: 16px;
-    margin-bottom: 48px;
+    margin: 40px 0px 40px 0px;
 }
 
+nav {
+    margin: 30px 0px 30px 0px;
+}
 
 button {
     cursor: pointer;
@@ -50,9 +52,11 @@ button {
     margin-top: 10px;
 }
 
-
 .input-wrapper {
     display: flex;
     flex-direction: column;
 }
 
+.title {
+    margin: 70px 0px 0px 50px;
+}

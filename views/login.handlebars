@@ -1,12 +1,15 @@
 {{> header }}
+{{>nav}}
 
 <h1 class="title">{{title}}</h1>
-{{#if messages.error}}
-<p>{{messages.error}}</p>
-{{/if}}
-<div class="login-page-wrapper">
-  <div class="login-wrapper">
-    <div class="login-wrapper-inner">
+<div class="error-wrapper">
+  {{#if messages.error}}
+    <p class="error-message">{{messages.error}}</p>
+  {{/if}}
+</div>
+<div class="page-wrapper">
+  <div class="wrapper">
+    <div class="wrapper-inner">
       <form action="/login" method="POST" class="form">
         <div class="input-wrapper">
           <label for="email">Email</label>
@@ -20,9 +23,9 @@
       </form>
     </div>
   </div>
-  <div class="login-wrapper">
-      <div class="login-wrapper-inner">
-        <div class="login-wrapper-register">
+  <div class="wrapper">
+      <div class="wrapper-inner">
+        <div class="login-wrapper-inside">
           <p>Don't have and account?</p>
          <button onclick="location.href='/register'" >Register here</button>
         </div>
