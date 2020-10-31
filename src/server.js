@@ -6,6 +6,7 @@ const expbs = require('express-handlebars')
 const path = require('path')
 const express = require('express')
 const userRouter = require('../routers/user-router')
+const contactRouter = require('../routers/contact-form')
 const { handlebars } = require('hbs')
 require('../db/mongoose')
 
@@ -13,6 +14,7 @@ const app = express()
 const port = process.env.PORT
 
 app.use(userRouter)
+app.use(contactRouter)
 
 //Data parsing
 app.use(express.json())
