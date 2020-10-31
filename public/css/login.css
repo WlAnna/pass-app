@@ -1,0 +1,42 @@
+/*Login page*/
+.title {
+    margin-left: 50px;
+}
+
+.login-page-wrapper {
+    display: flex;
+}
+
+.login-wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-wrapper-inner {
+    margin: 50px;
+    width: 300px;
+    height: 300px;   
+}
+
+.login-wrapper-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background-color:#F1F1F1;
+}
+
+.form {
+    margin-top: 25px;
+}
+
+input {
+    border: 1px solid #E1E1E1;
+    height: 50px;
+    padding: 6px 14px;
+    margin: 5px 0px 15px 0px;
+}
+

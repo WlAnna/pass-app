@@ -1,0 +1,58 @@
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+input {
+    font-size: 14px;
+}
+
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 16px;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+
+button {
+    cursor: pointer;
+    background: black;
+    color: white;
+    padding: 18px ;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+}
+
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
