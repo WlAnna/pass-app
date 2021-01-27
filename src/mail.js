@@ -10,12 +10,14 @@ const auth = {
 
 const transporter = nodemailer.createTransport(mailGun(auth))
 
+
 const sendMail = (email, name, message, cb) => {
     const mailOptions = {
         from: email,
         to: 'anna.wlodarczyk14@gmail.com',
         subject: `Contact Form from ${name}`,
-        text: message,
+        text: message
+      
     }
     
     transporter.sendMail(mailOptions, (err, data) => {
@@ -27,4 +29,6 @@ const sendMail = (email, name, message, cb) => {
     })   
 }
 
-module.exports = sendMail
+module.exports = sendMail 
+
+

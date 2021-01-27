@@ -1,5 +1,10 @@
-<h1>Contact Form</h1>
+{{> header }}
+{{>nav}}
 
+<h1 class="title">{{title}}</h1>
+<div class="error-wrapper">
+  {{message}}
+</div>
   <div class="wrapper">
     <div class="wrapper-inner">
       <form action="/login" method="POST" class="form">
@@ -16,9 +21,10 @@
             <textarea id="message" name="message" rows="4" cols="50"></textarea>
         </div>
         
-        <input type="submit" value="Submit">
+        <input class="submit" type="submit" value="Submit">
       </form>
     </div>
   </div>
+  {{>footer}}
 
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

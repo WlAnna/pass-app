@@ -1,0 +1,63 @@
+/*Login and Register page*/
+.page-wrapper {
+    display: flex;
+}
+
+.wrapper {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper-inner {
+    margin: 50px;
+    width: 330px;
+    height: 330px;   
+}
+
+.login-wrapper-inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 330px;
+    background-color:#F1F1F1;
+}
+
+.login-wrapper-inside button {
+    width: 70%;
+}
+
+input {
+    border: 1px solid #E1E1E1;
+    height: 50px;
+    padding: 6px 14px;
+    margin: 5px 0px 15px 0px;
+}
+
+.form {
+    margin-top: 25px;
+}
+
+.error-wrapper {
+    margin: 10px 0px 0px 50px;
+    width: 330px;
+}
+
+.error-message {
+    background-color:#F1F1F1;
+    padding: 10px 0px 10px 10px;
+}
+
+/*contact form*/
+
+.submit {
+    cursor: pointer;
+    background: black;
+    color: white;
+    padding: 18px ;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+}

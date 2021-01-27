@@ -2,7 +2,7 @@ const { send } = require('@sendgrid/mail')
 const express = require('express')
 const router = new express.Router()
 const path = require('path')
-const sendMail = require('../src/mail.js')
+const sendMail = require('../src/mail')
 
 
 //Data parsing
@@ -16,16 +16,20 @@ router.post('/email', (req, res) => {
     const {email, name, message} = req.body
     sendMail(email, name, message, function(err, data) {
         if (err) {
-            res.status(500).json({message: 'Internal Error'})
+            console.log(err)
+            //res.status(500).json({message: err.message || 'Internal Error'})
         } else {
-            res.json({message: 'Email sent!!'})
+            res.render('contact', {
+                message: 'Message has been sent!'
+            })
         }
     })
 })
 
 router.get('/contact', (req, res) => {
     res.render('contact', {
-        style: 'login.css'
+        title: 'Contact Form',
+        style: 'contact.css'
     })
     
 })
